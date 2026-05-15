@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "quiver-instruction-pack",
+    name: "quiver-course",
     platforms: [
         .macOS(.v12),
         .iOS(.v15)
@@ -12,7 +12,7 @@ let package = Package(
         .package(url: "https://github.com/waynewbishop/quiver.git", from: "1.1.0")
     ],
     targets: [
-        // The Statistics target compiles a placeholder Module.swift so the
+        // The Math target compiles a placeholder Module.swift so the
         // Quiver dependency resolves on `swift build` and Xcode opens the
         // pack as a working Swift Package. The assignment .swift files
         // themselves are excluded from compilation — each one is an
@@ -21,7 +21,7 @@ let package = Package(
         // `swift /path/to/01-descriptive-stats.swift`), not compiled
         // together as a single module.
         .target(
-            name: "Statistics",
+            name: "Math",
             dependencies: [
                 .product(name: "Quiver", package: "quiver")
             ],
